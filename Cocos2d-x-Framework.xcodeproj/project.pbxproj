@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		632DF1872444865600CE6CA7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 632DF1862444865600CE6CA7 /* main.cpp */; };
+		632DF1912444866E00CE6CA7 /* Ref.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 632DF1902444866E00CE6CA7 /* Ref.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		632D03CD244494DA00CE6CA7 /* CCScriptSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCScriptSupport.h; sourceTree = "<group>"; };
 		632DF1832444865600CE6CA7 /* Cocos2d-x-Framework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Cocos2d-x-Framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		632DF1862444865600CE6CA7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		632DF18E2444866400CE6CA7 /* PlatformDefine-ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlatformDefine-ios.h"; sourceTree = "<group>"; };
+		632DF18F2444866E00CE6CA7 /* Ref.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ref.hpp; sourceTree = "<group>"; };
+		632DF1902444866E00CE6CA7 /* Ref.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ref.cpp; sourceTree = "<group>"; };
+		632DF192244487B200CE6CA7 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		632DF1932444898000CE6CA7 /* PlatformMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		632D03CC244494C000CE6CA7 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				632D03CD244494DA00CE6CA7 /* CCScriptSupport.h */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 		632DF17A2444865600CE6CA7 = {
 			isa = PBXGroup;
 			children = (
@@ -57,9 +72,23 @@
 		632DF1852444865600CE6CA7 /* Cocos2d-x-Framework */ = {
 			isa = PBXGroup;
 			children = (
+				632D03CC244494C000CE6CA7 /* base */,
+				632DF18D2444866400CE6CA7 /* core */,
 				632DF1862444865600CE6CA7 /* main.cpp */,
+				632DF1902444866E00CE6CA7 /* Ref.cpp */,
+				632DF18F2444866E00CE6CA7 /* Ref.hpp */,
 			);
 			path = "Cocos2d-x-Framework";
+			sourceTree = "<group>";
+		};
+		632DF18D2444866400CE6CA7 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				632DF18E2444866400CE6CA7 /* PlatformDefine-ios.h */,
+				632DF192244487B200CE6CA7 /* Config.h */,
+				632DF1932444898000CE6CA7 /* PlatformMacros.h */,
+			);
+			path = core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				632DF1872444865600CE6CA7 /* main.cpp in Sources */,
+				632DF1912444866E00CE6CA7 /* Ref.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
