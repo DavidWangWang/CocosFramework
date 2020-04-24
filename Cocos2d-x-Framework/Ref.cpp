@@ -7,7 +7,9 @@
 //
 
 #include "Ref.hpp"
-#include "CCScriptSupport.h"
+#include "CCScriptSupport.hpp"
+#include "PlatformDefine-ios.h"
+#include "ccMacros.h"
 NS_CC_BEGIN
 
 #if CC_REF_LEAK_DETECTION
@@ -37,11 +39,47 @@ Ref::Ref()
 Ref::~Ref()
 {
 #if CC_ENABLE_SCRIPT_BINDING
-    
-    
+    ScriptEngineProtocol* pEngine = ScriptEngineManager::getInstance()->getScriptEngine();
+    if (pEngine != nullptr && _luaID) {
+        pEngine->removeScriptObjectByObject(this);
+    }
+#if !CC_ENABLE_GC_FOR_NATIVE_OBJECTS
+    else
+    {
+        if (pEngine != nullptr && pEngine->getScriptType() == kScriptTypeJavascript)
+        {
+            pEngine->removeScriptObjectByObject(this);
+        }
+    }
+#endif
 #endif
     
+#if CC_REF_LEAK_DETECTION
+    if (_referenceCount != 0) {
+        untrackRef(this);
+    }
+#endif
 }
+
+void Ref::retain()
+{
+    CCASSERT(_referenceCount > 0, "reference count should be greater than 0");
+    ++ this->_referenceCount;
+}
+
+void Ref::release()
+{
+    CCASSERT(_referenceCount > 0, "reference count should be greater than 0");
+    -- this->_referenceCount;
+    if (this->_referenceCount == 0) {
+#if defined(COCOS2D_DEBUG) && (COCOS2D_DEBUG > 0)
+            
+#endif
+        
+    }
+    
+}
+
 
 NS_CC_END
 

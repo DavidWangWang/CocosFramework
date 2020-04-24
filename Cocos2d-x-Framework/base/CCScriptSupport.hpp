@@ -11,6 +11,8 @@
 #include "PlatformDefine-ios.h"
 #include "Ref.hpp"
 #include <string>
+#include "Action.hpp"
+//#include "PlatformMacros.h"
 
 NS_CC_BEGIN
 
@@ -130,6 +132,45 @@ public:
     
     virtual void garbageCollect() {}
 };
+
+class Node;
+
+class CC_DLL ScriptEngineManager
+{
+public:
+     ~ScriptEngineManager(void);
+     
+    ScriptEngineProtocol* getScriptEngine(void) {
+        return this->_scriptEngine;
+    }
+    
+    void setScriptEngine(ScriptEngineProtocol *scriptEngine);
+    
+    void removeScriptEngine(void);
+//
+    static ScriptEngineManager *getInstance();
+//
+//    static void destoryInstance();
+//
+////    static bool sendActionEventToJS(Action *actionObject, int eventType, void* params);
+//
+//    static bool sendNodeEventToJS(Node *node, int action);
+//
+//    static bool sendNodeEventToJSExtended(Node *node, int action);
+//
+//
+//    static void sendNodeEventToLua(Node *node, int action);
+    
+    
+private:
+    ScriptEngineManager(void)
+       : _scriptEngine(nullptr)
+       {
+       }
+    ScriptEngineProtocol *_scriptEngine;
+    
+};
+
 
 
 NS_CC_END

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		632DF1872444865600CE6CA7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 632DF1862444865600CE6CA7 /* main.cpp */; };
 		632DF1912444866E00CE6CA7 /* Ref.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 632DF1902444866E00CE6CA7 /* Ref.cpp */; };
+		63D2D9C5244ECBA900C444E3 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D2D9C3244ECBA900C444E3 /* Action.cpp */; };
+		63D2D9C8244EF15600C444E3 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D2D9C6244EF15600C444E3 /* Node.cpp */; };
+		63D2D9CB244EF57E00C444E3 /* CCScriptSupport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D2D9C9244EF57E00C444E3 /* CCScriptSupport.cpp */; };
+		63D2D9CF244F025C00C444E3 /* PoolManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D2D9CD244F025C00C444E3 /* PoolManager.cpp */; };
+		63D2D9DB2450787E00C444E3 /* AutoreleasePool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D2D9D92450787E00C444E3 /* AutoreleasePool.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		632D03CD244494DA00CE6CA7 /* CCScriptSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCScriptSupport.h; sourceTree = "<group>"; };
+		632D03CD244494DA00CE6CA7 /* CCScriptSupport.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CCScriptSupport.hpp; sourceTree = "<group>"; };
 		632DF1832444865600CE6CA7 /* Cocos2d-x-Framework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Cocos2d-x-Framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		632DF1862444865600CE6CA7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		632DF18E2444866400CE6CA7 /* PlatformDefine-ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlatformDefine-ios.h"; sourceTree = "<group>"; };
@@ -32,6 +37,16 @@
 		632DF1902444866E00CE6CA7 /* Ref.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ref.cpp; sourceTree = "<group>"; };
 		632DF192244487B200CE6CA7 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		632DF1932444898000CE6CA7 /* PlatformMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformMacros.h; sourceTree = "<group>"; };
+		63D2D9C3244ECBA900C444E3 /* Action.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Action.cpp; sourceTree = "<group>"; };
+		63D2D9C4244ECBA900C444E3 /* Action.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Action.hpp; sourceTree = "<group>"; };
+		63D2D9C6244EF15600C444E3 /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		63D2D9C7244EF15600C444E3 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		63D2D9C9244EF57E00C444E3 /* CCScriptSupport.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CCScriptSupport.cpp; sourceTree = "<group>"; };
+		63D2D9CC244EFA9100C444E3 /* ccMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ccMacros.h; sourceTree = "<group>"; };
+		63D2D9CD244F025C00C444E3 /* PoolManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PoolManager.cpp; sourceTree = "<group>"; };
+		63D2D9CE244F025C00C444E3 /* PoolManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PoolManager.hpp; sourceTree = "<group>"; };
+		63D2D9D92450787E00C444E3 /* AutoreleasePool.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AutoreleasePool.cpp; sourceTree = "<group>"; };
+		63D2D9DA2450787E00C444E3 /* AutoreleasePool.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AutoreleasePool.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +63,15 @@
 		632D03CC244494C000CE6CA7 /* base */ = {
 			isa = PBXGroup;
 			children = (
-				632D03CD244494DA00CE6CA7 /* CCScriptSupport.h */,
+				63D2D9C4244ECBA900C444E3 /* Action.hpp */,
+				63D2D9C3244ECBA900C444E3 /* Action.cpp */,
+				632D03CD244494DA00CE6CA7 /* CCScriptSupport.hpp */,
+				63D2D9C9244EF57E00C444E3 /* CCScriptSupport.cpp */,
+				63D2D9CC244EFA9100C444E3 /* ccMacros.h */,
+				63D2D9CE244F025C00C444E3 /* PoolManager.hpp */,
+				63D2D9CD244F025C00C444E3 /* PoolManager.cpp */,
+				63D2D9DA2450787E00C444E3 /* AutoreleasePool.hpp */,
+				63D2D9D92450787E00C444E3 /* AutoreleasePool.cpp */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -72,11 +95,12 @@
 		632DF1852444865600CE6CA7 /* Cocos2d-x-Framework */ = {
 			isa = PBXGroup;
 			children = (
+				63D2D9C1244ECB8900C444E3 /* 2d */,
 				632D03CC244494C000CE6CA7 /* base */,
 				632DF18D2444866400CE6CA7 /* core */,
 				632DF1862444865600CE6CA7 /* main.cpp */,
-				632DF1902444866E00CE6CA7 /* Ref.cpp */,
 				632DF18F2444866E00CE6CA7 /* Ref.hpp */,
+				632DF1902444866E00CE6CA7 /* Ref.cpp */,
 			);
 			path = "Cocos2d-x-Framework";
 			sourceTree = "<group>";
@@ -89,6 +113,23 @@
 				632DF1932444898000CE6CA7 /* PlatformMacros.h */,
 			);
 			path = core;
+			sourceTree = "<group>";
+		};
+		63D2D9C1244ECB8900C444E3 /* 2d */ = {
+			isa = PBXGroup;
+			children = (
+				63D2D9C2244ECB8900C444E3 /* actions */,
+			);
+			path = 2d;
+			sourceTree = "<group>";
+		};
+		63D2D9C2244ECB8900C444E3 /* actions */ = {
+			isa = PBXGroup;
+			children = (
+				63D2D9C6244EF15600C444E3 /* Node.cpp */,
+				63D2D9C7244EF15600C444E3 /* Node.hpp */,
+			);
+			path = actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +190,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				632DF1872444865600CE6CA7 /* main.cpp in Sources */,
+				63D2D9DB2450787E00C444E3 /* AutoreleasePool.cpp in Sources */,
+				63D2D9CF244F025C00C444E3 /* PoolManager.cpp in Sources */,
+				63D2D9C5244ECBA900C444E3 /* Action.cpp in Sources */,
 				632DF1912444866E00CE6CA7 /* Ref.cpp in Sources */,
+				63D2D9C8244EF15600C444E3 /* Node.cpp in Sources */,
+				63D2D9CB244EF57E00C444E3 /* CCScriptSupport.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +315,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = " -all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Cocos2d-x-Framework/base";
 			};
 			name = Debug;
 		};
@@ -277,7 +325,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = " -all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Cocos2d-x-Framework/base";
 			};
 			name = Release;
 		};
