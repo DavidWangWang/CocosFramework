@@ -95,6 +95,7 @@
 		632DF1852444865600CE6CA7 /* Cocos2d-x-Framework */ = {
 			isa = PBXGroup;
 			children = (
+				63D2D9EA24556A2D00C444E3 /* platform */,
 				63D2D9C1244ECB8900C444E3 /* 2d */,
 				632D03CC244494C000CE6CA7 /* base */,
 				632DF18D2444866400CE6CA7 /* core */,
@@ -130,6 +131,13 @@
 				63D2D9C7244EF15600C444E3 /* Node.hpp */,
 			);
 			path = actions;
+			sourceTree = "<group>";
+		};
+		63D2D9EA24556A2D00C444E3 /* platform */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = platform;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

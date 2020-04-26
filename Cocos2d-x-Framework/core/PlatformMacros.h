@@ -9,6 +9,8 @@
 #ifndef CCPlatformMacros_h
 #define CCPlatformMacros_h
 
+
+
 #ifdef __cplusplus
     #define NS_CC_BEGIN  namespace cocos2d {
     #define NS_CC_END    }
@@ -25,6 +27,6 @@
     #define CC_DEPRECATED_ATTRIBUTE __attribute__((deprecated))
 #endif
 
-
+#define CCLOGINFO(format,...)   do {} while (0)
 
 #endif /* CCPlatformMacros_h */

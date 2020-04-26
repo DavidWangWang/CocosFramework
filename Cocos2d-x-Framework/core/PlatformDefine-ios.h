@@ -12,7 +12,7 @@
 
 #define CC_DLL
 #define CC_ASSERT(cond) assert(cond)
-
+#define COCOS2D_DEBUG 1
 
 
 #endif /* PlatformDefine_ios_h */

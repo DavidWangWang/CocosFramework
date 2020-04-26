@@ -11,7 +11,7 @@
 
 
 
-//#define CCLOGINFO(format,...)   do {} while (0)
+#define CCLOGINFO(format,...)   do {} while (0)
 
 
 #endif /* PlatformMacros_h */
