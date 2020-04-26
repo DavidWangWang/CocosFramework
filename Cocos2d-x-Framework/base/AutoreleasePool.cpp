@@ -8,6 +8,7 @@
 
 #include "AutoreleasePool.hpp"
 #include "PoolManager.hpp"
+#include "PlatformMacros.h"
 
 NS_CC_BEGIN
 
@@ -71,6 +72,16 @@ bool AutoreleasePool::contains(Ref *object) const
         }
     }
     return false;
+}
+
+void AutoreleasePool::dump()
+{
+    CCLOG("autorelease pool: %s, number of managed object %d\n", _name.c_str(), static_cast<int>(_managedObjectArray.size()));
+    CCLOG("%20s%20s%20s", "Object pointer", "Object id", "reference count");
+    for (const auto &obj : _manageObjectArray)
+    {
+       CCLOG("%20p%20u\n", obj, obj->getReferenceCount());
+    }
 }
 
 NS_CC_END

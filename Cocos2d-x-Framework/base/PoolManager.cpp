@@ -39,7 +39,11 @@ PoolManager::PoolManager()
 
 PoolManager::~PoolManager()
 {
-    
+    CCLOGINFO("deallocing PoolManager: %p", this);
+    while (! _releasePoolStack.empty()) {
+        AutoreleasePool* pool = _releasePoolStack.back();
+        delete pool;
+    }
 }
 
 void PoolManager::push(AutoreleasePool *pool)

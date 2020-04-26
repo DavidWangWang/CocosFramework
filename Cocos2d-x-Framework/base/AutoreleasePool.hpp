@@ -42,7 +42,7 @@ public:
          * @lua NA
          */
         bool isClearing() const { return _isClearing; };
-    #endif
+#endif
     
     bool contains(Ref *object) const;
     

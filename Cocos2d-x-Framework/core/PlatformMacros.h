@@ -28,5 +28,7 @@
 #endif
 
 #define CCLOGINFO(format,...)   do {} while (0)
+#define CCLOG(format, ...)      //cocos2d::log(format, ##__VA_ARGS__)
+
 
 #endif /* CCPlatformMacros_h */
